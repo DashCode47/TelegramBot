@@ -47,10 +47,10 @@ async def handler(event):
         print(f"✅ Oferta encontrada en {event.chat.title}")
         
         # Crear un mensaje resumen
-        summary = f"**🎯 OFERTA DETECTADA**\n"
+        summary = "**🎯 OFERTA DETECTADA**\n"
         summary += f"**Palabras clave:** {', '.join(found_keywords)}\n"
         summary += f"**Origen:** {event.chat.title}\n"
-        summary += f"-----------------------\n"
+        summary += "-----------------------\n"
         
         # Enviar a tus "Mensajes Guardados" (Saved Messages)
         await client.send_message('me', summary)
